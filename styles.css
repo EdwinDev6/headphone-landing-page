@@ -202,3 +202,36 @@ header {
 .shop-container .box .bx:hover {
   background: var(--hover-color);
 }
+
+.buds-container{
+  display: grid;
+  grid-template-columns: 250px max-content;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4rem;
+  background: var(--hover-color);
+  color: var(--bg-color);
+  border-radius: 0.5rem;
+}
+
+.buds-img img {
+  width: 320px;
+}
+
+.buds-text h2{
+font-size: 1.4rem;
+font-weight: 600;
+margin-bottom: 0.5rem;
+}
+
+.buds-text span{
+  font-weight: 400;
+}
+
+.buds-text p{
+  margin: 1rem 0 1rem;
+}
+
+.buds-text .btn:hover{
+  background: hsl(0, 0%, 10%);
+}
