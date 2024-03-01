@@ -17,6 +17,16 @@
   --bg-color: #fff;
 }
 
+html::-webkit-scrollbar{
+  width: 0.5rem;
+  background: #2e2e2e;
+}
+
+html::-webkit-scrollbar-thumb{
+  border-radius: 2rem;
+  background: var(--text-color);
+}
+
 img {
   width: 100%;
 }
@@ -46,6 +56,11 @@ header {
   top: 0;
   left: 0;
   z-index: 100;
+}
+header.shadow {
+  background: var(--bg-color);
+  box-shadow: 1px 2px 4px rgb(15 54 55 / 10%);
+  transition: 0.2s;
 }
 
 .logo img {
@@ -203,7 +218,7 @@ header {
   background: var(--hover-color);
 }
 
-.buds-container{
+.buds-container {
   display: grid;
   grid-template-columns: 250px max-content;
   justify-content: center;
@@ -218,20 +233,64 @@ header {
   width: 320px;
 }
 
-.buds-text h2{
-font-size: 1.4rem;
-font-weight: 600;
-margin-bottom: 0.5rem;
+.buds-text h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-.buds-text span{
+.buds-text span {
   font-weight: 400;
 }
 
-.buds-text p{
+.buds-text p {
   margin: 1rem 0 1rem;
 }
 
-.buds-text .btn:hover{
+.buds-text .btn:hover {
   background: hsl(0, 0%, 10%);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, auto));
+  gap: 1rem;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-box h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-box a {
+  color: var(--text-color);
+  margin-bottom: 4px;
+}
+
+.social {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.social .bx {
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 10px;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.social .bx:hover {
+  background: var(--hover-color);
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px;
 }
