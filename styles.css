@@ -17,12 +17,12 @@
   --bg-color: #fff;
 }
 
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   width: 0.5rem;
   background: #2e2e2e;
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
   border-radius: 2rem;
   background: var(--text-color);
 }
@@ -290,7 +290,105 @@ header.shadow {
   background: var(--hover-color);
 }
 
-.copyright {
-  text-align: center;
-  padding: 20px;
+@media (max-with: 1080px) {
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media (max-with: 1080px) {
+  .section {
+    padding: 50px 0;
+  }
+  .home-text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-with: 768px) {
+  .logo img {
+    width: 30px;
+  }
+  #menu-icon {
+    display: initial;
+    z-index: 150;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 5px 8px rgb(15 54 55 / 10%);
+    clip-path: circle(0% at 50% 0);
+    transition: 0.5s;
+  }
+  .navbar a {
+    display: block;
+    padding: 12px;
+  }
+  .navbar.active {
+    clip-path: circle(144% at 50% 0);
+  }
+  .home-text h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.875rem;
+  }
+  .btn {
+    padding: 15px 16px;
+  }
+  .heading {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 684px) {
+  .home-content,
+  .specs-container,
+  .buds-container {
+    grid-template-columns: 1fr;
+  }
+  .buds-text {
+    padding: 1.4rem;
+  }
+  .home-content {
+    min-height: 540px;
+  }
+  .specs-img {
+    padding-top: 2rem;
+  }
+  .shop-container {
+    grid-template-columns: repeat(2, 164px);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    padding: 4px;
+  }
+  .home-text h1 {
+    font-size: 1.8rem;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+  .shop-container {
+    grid-template-columns: repeat(2, 144px);
+  }
+}
+
+@media (max-width: 300px) {
+  .shop-container {
+    grid-template-columns: repeat(1, 144px);
+  }
+  .buds-text {
+    padding: 4.4rem;
+  }
 }
